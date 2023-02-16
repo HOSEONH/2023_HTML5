@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Form을 이용한 입력양식</h1>
+    <h2>input의 type</h2>
+    <!-- 한줄메모 -->
+    <!--라벨을 사용하게 되면 라벨과 태그를 하나로 같이 생각해서 사용할 수 있으니까-->
+    <div>
+      <label>한줄메모</label>
+      <input type="text" value="안녕" />
+    </div>
+    <div>
+      <label>비밀번호</label>
+      <input type="password" />
+    </div>
+    <p>input 태그는 인라인 속성이다</p>
+
+    <h3>라디오 버튼</h3>
+    <div>
+      <label>오늘의 점심</label> <br />
+      <input type="radio" name="food" value="양식" /> 양식
+      <input type="radio" name="food" value="중식" /> 중식
+      <input type="radio" name="food" value="한식" /> 한식
+      <!-- 반드시 하나만 선책해야 할 때 라디오 버튼 사용 -->
+    </div>
+    <p>
+      radio 타입의 경우 name을 통해서 그룹으로 묶여진다 <br />
+      그룹으로 묶여졌을경우 그룹중에 하나만 선택할 수 있다 <br />
+      input 태그의 value 속성은 서버로 보낼 값이 된다 <br />
+      text나 password처럼 값을 입력받는 경우가 아니라면 미리 적어둔다
+    </p>
+    <!-- name 값을 전달할 때 어떠한 이름으로 가는가를 정해준다 -->
+    <!--input태그에서 value 값 전달할 값
+    라디오의 경우 선택해서 value 값 가져올 수 있도록-->
+    <!--input속성이기 때문에 연달아서 나옴-->
+    <!--    <input type="radio" name="food">
+    <input type="radio" name="book">
+    서로 다른 그룹이기 때문에 동시 선택이 가능함
+    -->
+
+    <h3>체크박스</h3>
+    <div>
+      <label>컴퓨터 언어</label> <br />
+      <input type="checkbox" name="언어" value="html" checked />
+      <sapn>HTML</sapn> <input type="checkbox" name="언어" value="css" />
+      <sapn>CSS</sapn>
+      <input type="checkbox" name="언어" value="JavaScript" disabled />
+      <sapn>JavaScript</sapn>
+    </div>
+    <p>
+      체크박스는 여러개를 선택할 때 사용할 수 있는 type이디 <br />
+      checked, disabled 체크박스의 상태를 작성할 수 있다 <br />
+      라디오버튼도 동일하게 적용
+    </p>
+    <!-- span태그로 감싸기 -->
+    <!-- checked미리 선택되게 해두거나 disabled선택하지 못하도록 만들어둠
+        라디오 버튼에서도 동일하게 사용 가능 -->
+
+    <h3>파일 선택</h3>
+    <input type="file" accept="image/*" />
+    <!--이미지 한정으로 보여짐
+        가져오고자하는 파일의 종류를 한정시켜줄 수 있음-->
+    <!--<input type="file" name="">
+    <input type="file" name="">-->
+
+    <h2>input이 아닌 입력창</h2>
+    <h3>select 선택</h3>
+    <select name="fruit">
+      <option value="apple">사과</option>
+      <option value="orange">오렌지</option>
+      <option value="strawberry">딸기</option>
+      <option value="peach" selected>복숭아</option>
+    </select>
+    <!-- selected 가장 먼저 나오게-->
+
+    <h3>textarea</h3>
+    <textarea cols="30" rows="10"></textarea>
+    <p>크기를 cols과 lows를 통해서 지정</p>
+    <!--영어로 30 한글이 차지하는 것과 영문이 차지하는 글자의 크기 다름-->
+
+    <h3>button</h3>
+    <button type="button" onclick="alert('버튼을 클릭하셨군요')">
+      버튼을 눌러주세요
+    </button>
+    <!--alert 창을 간단하게 만들 수 있음-->
+
+    <h3>Form을 통한 입력값 전달-submit</h3>
+    <form action="" method="get">
+      <!--post로 보내게 되면 따로 첨부해서 보내게됨-->
+      <input type="text" name="nickname" />
+      <input type="submit" value="전송" />
+      <button type="submit">버튼으로 전송</button>
+    </form>
+    <p>
+      작성한 입력값은 name=value 형태로 전달이 되어진다 <br />
+      값을 전달할 때는 form을 통해서 전달 <br />
+      form안에 있는 submit 타입의 태그를 통해 전달이 된다 <br>
+      get : 주소로 값을
+      전달, post 따로 값을 전달
+      <!-- submit 반드시 home과 함께 -->
+    </p>
+
+    <h3>필드셋</h3>
+    <form action="">
+      <fieldset>
+        <legend>입력양식</legend>
+        <label>이름</label>
+        <input type="text" name="username" /> <br />
+        <label>이메일</label>
+        <input type="text" name="email" /> <br />
+        <input type="submit" value="전송" />
+      </fieldset>
+      <!-- 줄맞춤 : 마우스 오른쪽 클릭 format document-->
+    </form>
+    <!--  <input type="text" value="초기값" readonly>
+          readonly 읽기전용 
+          disabled -->
+    <h3>input의 text 타입 속성확인</h3>
+    <input type="text" value="초기값" maxlength="10" size="5" placeholder="힌트">
+
+    
+    <h1>로그인 페이지 입니다</h1>
+    <table style="border: solid 3px black;">
+      <tr>
+        <td>
+          <label>사용자 : </label>
+          <input type="text"> 
+        </td>
+        <td rowspan="2">
+          <input type="submit" value="전송" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>비밀번호 : </label>
+          <input type="password">
+        </td>
+      </tr>
+    </table>
+    <a href="link">비밀번호를 잊어버렸나요?</a>
+
+    <h1>로그인 페이지 입니다</h1>
+    <div style="border: solid 1px black;">
+      <div>
+        <label>사용자 : </label>
+        <input type="text" name="id"> 
+      </div>
+      <div>
+        <label>비밀번호 : </label>
+        <input type="password" name="password">
+      </div>
+      <div>
+        <input type="button" value="전송">
+      </div>
+    </div>
+
+  </body>
+</html>
+
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- table을 사용한 것 -->
+    <h1>로그인 페이지 입니다</h1>
+    <table style="border: solid 2px black">
+      <tr>
+        <td>사용자:</td>
+        <td><input type="text" /></td>
+        <td rowspan="2"><input type="submit" /></td>
+      </tr>
+      <tr>
+        <td>비밀번호</td>
+        <td><input type="password" /></td>
+      </tr>
+    </table>
+    <a href="#">비밀번호를 잊어버렸나요?</a>
+    <!-- table을 전체를 사용안한다는 말 전체 안에서는 사용함 -->
+    <hr />
+
+    <!-- div를 사용한 것 -->
+
+    <div style="border: solid 2px black; width: 290px">
+      <div>
+        <label for="">사용자</label>
+        <input type="text" />
+      </div>
+      <div>
+        <label for="">비밀번호</label>
+        <input type="password" />
+      </div>
+    </div>
+    <input type="submit" value="제출" />
+
+    <!-- HTML 입력 양식 실습 2 -->
+    <h1>설문조사</h1>
+    <p>1. 성별을 체크해주세요</p>
+    <input type="radio" name="sex" value="남" /> 남
+    <input type="radio" name="sex" value="여" /> 여
+    <p>2. 음식을 선택해주세요</p>
+    <input type="checkbox" name="food" value="한식" /> 한식<br />
+    <input type="checkbox" name="food" value="일식" /> 일식<br />
+    <input type="checkbox" name="food" value="중식" /> 중식<br />
+    <input type="checkbox" name="food" value="양식" /> 양식
+    <p>3. 기타의견을 남겨주세요</p>
+    <textarea cols="30" rows="5"></textarea>
+
+    <h1>설문조사</h1>
+    <ol>
+      <li><p>성별을 체크해주세요</p></li>
+      <input type="radio" name="sex" value="남" />
+      남
+      <input type="radio" name="sex" value="여" />
+      여
+      <li><p>음식을 선택해주세요</p></li>
+      <input type="checkbox" name="food" value="한식" />
+      한식<br />
+      <input type="checkbox" name="food" value="일식" />
+      일식<br />
+      <input type="checkbox" name="food" value="중식" />
+      중식<br />
+      <input type="checkbox" name="food" value="양식" />
+      양식
+      <li><p>기타의견을 남겨주세요</p></li>
+      <textarea cols="30" rows="8"></textarea>
+    </ol>
+
+    <hr>
+    <h1>설문조사</h1>
+    <div>
+      <p>성별을 체크해주세요</p>
+      <input type="radio" name="gender" value="man">남
+      <!-- name을 체크하지 않으면 둘 다 선택됨-->
+      <input type="radio" name="gender" value="woman">여
+    </div>
+    <div>
+      <p>음식을 선택해주세요</p>
+      <input type="checkbox" name="menu" value="한식">한식 <br>
+      <input type="checkbox" name="menu" value="일식">일식 <br>
+      <input type="checkbox" name="menu" value="중식">중식 <br>
+      <input type="checkbox" name="menu" value="양식">양식
+    </div>
+    <div>
+      <p>기타의견을 남겨주세요</p>
+      <textarea name="memo" cols="40" rows="7"></textarea>
+      <!-- name값이 없는 경우는 서버로 연결전달이 안됨 -->
+    </div>
+    <h1>숫자가 들어간 설문조사</h1>
+    <ol>
+      <li>
+        <p>성별을 체크해주세요</p>
+        <input type="radio" name="gender" value="man">남
+        <input type="radio" name="gender" value="woman">여
+      </li>
+      <li>
+        <p>음식을 선택해주세요</p>
+        <input type="checkbox" name="menu" value="한식">한식 <br>
+        <input type="checkbox" name="menu" value="일식">일식 <br>
+        <input type="checkbox" name="menu" value="중식">중식 <br>
+        <input type="checkbox" name="menu" value="양식">양식
+      </li>
+      <li>
+        <p>기타 의견을 남겨주세요</p>
+        <textarea name="memo" cols="30" rows="10"></textarea>
+      </li>
+    </ol>
+    <!--각각의 태그들이 어떠한 기능을 하고 어떻게 보여지는가
+    버튼 속성들 
+    block인지 in line인지 에 따라 다르다-->
+
+  </body>
+</html>

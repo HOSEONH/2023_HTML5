@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="150"
+    style="border: 1px solid brown">
+    </canvas>
+
+</body>
+</html>
+    <script>
+        let paper = document.getElementById("myCanvas");
+        let context = paper.getContext("2d");
+        let grd = context.createRadialGradient(0, 50, 5, 90, 60, 100);
+        
+        grd.addColorStop(0, "blue");
+        grd.addColorStop(1, "white");
+        
+        context.fillStyle = grd;
+        context.fillRect(10,10,150,80);
+        
+        context.fillStyle = "#FFFFFF";
+        context.font="30px Arial";
+        context.fillText(" CANVAS", 10, 50);
+    </script>
